@@ -334,21 +334,33 @@
 
 
 
-   <!-- Parceiros ---------------------------------------------------------->
+<!-- Parceiros (decentemente RESPONSIVO/normal) ---------------------------------------------------------->
     <section id="parceiros" class="parceiros fade-in">
         <h2 id="parceiros-titulo">Parceiros</h2>
         <div class="parceiros-content">
                 <div class="parceiros-card">
-                    <h2 id="empresa-01">Harpion</h2>
-                    <img class="img-parceiro" src="images/parceiros/harpion.jpeg" alt="Harpion Logo">
+                    <!--<h2 id="empresa-01">Harpion</h2>-->
+                    <img class="img-parceiro" src="images/Parceiros/harpion.jpeg" alt="Harpion Logo">
+                    <div class="parceiros-hoverText">
+                        <!--<h4>Slogan da empresa</h4>-->
+                        <h4>"A Harpion é movida pela inovação e pelo compromisso com a transformação digital"</h4>
+                    </div>
                 </div>
                 <div class="parceiros-card">
-                    <h2 id="empresa-02">Split</h2>
-                    <img class="img-parceiro" src="images/parceiros/split.jpeg" alt="Split Logo">
+                    <!--<h2 id="empresa-02">Split</h2>-->
+                    <img class="img-parceiro" src="images/Parceiros/split.jpeg" alt="Split Logo">
+                    <div class="parceiros-hoverText">
+                        <!--<h4>Slogan da empresa</h4>-->
+                        <h4>Atua no setor mobile, voltada a amenizar causas sociais latentes com seus trabalhos</h4>
+                    </div>
                 </div>    
                 <div class="parceiros-card">
-                    <h2 id="empresa-03">Umond</h2>
-                    <img class="img-parceiro" src="images/parceiros/umond.jpeg" alt="Umond Logo">
+                    <!--<h2 id="empresa-03">Umond</h2>-->
+                    <img class="img-parceiro" src="images/Parceiros/umond.JPEG" alt="Umond Logo">
+                    <div class="parceiros-hoverText">
+                        <!--<h4>Slogan da empresa</h4>-->
+                        <h4>"Na Umond, somos apaixonados por proteger o que é mais valioso para você"</h4>
+                    </div>
                 </div>
         </div>
     </section>

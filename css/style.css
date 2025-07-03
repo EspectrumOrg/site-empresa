@@ -1371,12 +1371,11 @@ body::-webkit-scrollbar-thumb {
 
 /*-------------------------------PARCEIROS---------------------------------------------*/
 #parceiros {
-    padding: 10px 10px;
+    width: 80%;
     background-color: var(--cor-primaria);
     margin: auto;
     text-align: center;
     background-color: var(--cor-fundo);
-    overflow-x: hidden;
 }
 
 #parceiros-titulo {
@@ -1395,16 +1394,33 @@ body::-webkit-scrollbar-thumb {
 }
 
 .parceiros-content {
-    width: 80%;
+    width: 70%;
     display: inline-flex;
-    justify-content:center;
-    align-items: center;
+    justify-content: center;
+    gap: 75px;
+    align-items: baseline;
+    padding: 4%;
     margin: auto;
+    transition: 0.85s ease-in-out;
 }
 
 .parceiros-card {
-    margin: 2%;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 20 60 10 rgba(0, 0, 0, 0.45);
+    transition: 0.85s ease-in-out;
+    position: relative;
 }
+
+.parceiros-card:hover {
+    width: 300px;
+    height: 180px;
+    transition: 0.85s ease-in-out;
+}
+
+/*
 #empresa-01,
 #empresa-02,
 #empresa-03 {
@@ -1434,75 +1450,214 @@ body::-webkit-scrollbar-thumb {
 #empresa-03::after {
     background-color: var(--azul);
 }
+*/
 
-.img-parceiro {
+.parceiros-card .img-parceiro {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.1, 0.1);
     image-rendering: optimizeQuality;
-    width: 350px;
-    height: 210px;
+    object-fit: contain;
+    transition: transform 0.6s, box-shadow 0.6s;
 }
 
+.parceiros-card:hover .img-parceiro {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    transition: 0.85s ease-in-out;
+}
+
+.parceiros-card .img-parceiro img{
+    width: 100%;
+    height: 100%;
+    image-rendering: optimizeQuality;
+    object-fit: contain;
+}
+
+.parceiros-card .parceiros-hoverText {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    width: 240px;
+    height: 15px;
+    margin-top: 170px;
+    text-align: center;
+    transition: 0.85s ease-in-out;
+    cursor: unset;
+    opacity: 0;
+    overflow: hidden;
+    will-change: opacity, overflow;
+}
+
+.parceiros-card:hover .parceiros-hoverText {
+    margin-top: 170px;
+    color: #0D0D0D;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    transition: 0.85s ease-in-out;
+    opacity: 100%;
+    overflow: visible;
+}
 /* Responsividade para parceiros */
 @media screen and (max-width: 1024px) {
     .parceiros-content {
-        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        padding: none;
         margin: auto;
-        padding: auto;
+        margin-left: -2%;
     }
 
-    .img-parceiro {
-        image-rendering: optimizeQuality;
-        width: 250px;
-        height: 215px;
+    .parceiros-card .img-parceiro {
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        width: 210px;
+        height: 105px;
+        border-radius: 10px;
+        overflow: hidden;
+        will-change: transform;
+    }
+
+    .parceiros-card:hover .img-parceiro {
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        width: 210px;
+        height: 105px;
+        border-radius: 10px;
+        transition: 0.35s ease-in-out;
+        transform: translateY(-10px);
+    }
+
+    .parceiros-card .parceiros-hoverText,
+    .parceiros-card:hover .parceiros-hoverText {
+        display: none;
+        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 768px) {
     .parceiros-content {
-        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         margin: auto;
-        padding: auto;
+        margin-left: 1%;
+        width: 80%;
     }
 
-    .img-parceiro {
-        image-rendering: optimizeQuality;
-        width: 170px;
-        height: 135px;
+    .parceiros-card .img-parceiro {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 185px;
+        height: 95px;
+        border-radius: 15px;
+        will-change: transform, transition;
+    }
+
+    .parceiros-card:hover .img-parceiro {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        width: 185px;
+        height: 95px;
+        border-radius: 15px;
+        transform: translateY(-10px);
+        transition: 0.2s ease-in-out;
+    }
+
+    .parceiros-card .parceiros-hoverText,
+    .parceiros-card:hover .parceiros-hoverText {
+        display: none;
+        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 600px) {
     .parceiros-content {
-        display: inline;
-        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: auto;
-        padding: auto;
+        padding: 5%;
+        width: 90%;
+        margin-left: -10%;
+        transition: none;
+        pointer-events: none;
     }
 
-    #empresa-01,
+/*    #empresa-01,
     #empresa-02,
     #empresa-03 {
         font-size: 26px;
         margin-bottom: 20px;
         color: var(--cor-texto);
     }    
+*/
+    .parceiros-card:hover {
+        transform: none;
+        transition: none;
+    }
 
-    .img-parceiro {
+    .parceiros-card .img-parceiro {
+        object-fit: cover;
         image-rendering: optimizeQuality;
-        width: 200px;
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        width: 380px;
         height: 180px;
-        margin-bottom: 10px;
+        border-radius: 15px;
+        pointer-events: none;
+    }
+
+    .parceiros-card .parceiros-hoverText,
+    .parceiros-card:hover .parceiros-hoverText {
+        display: none;
+        overflow: hidden;
     }
 }
 
 @media screen and (max-width: 414px) {
     .parceiros-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        margin-left: 3%;
+        width: 75%;
         max-width: 407px;
-        overflow-x: hidden;
+        pointer-events: none;
     }
-    .img-parceiro {
-        width: 80%;
+    
+    .parceiros-card:hover {
+        transition: none;
+        will-change: unset;
     }
-}
+
+    .parceiros-card .img-parceiro {
+        object-fit: cover;
+        pointer-events: none;
+        width: 330px;
+        height: 155px;
+        border-radius: 14px;
+    }
+
+    .parceiros-card .parceiros-hoverText,
+    .parceiros-card:hover .parceiros-hoverText {
+        display: none;
+        overflow: hidden;
+    }
 /*-----------------------------------------------------CONTATO----------------------------------------------------------------*/
 #contato {
     padding: 60px 20px;
