@@ -1658,6 +1658,7 @@ body::-webkit-scrollbar-thumb {
         display: none;
         overflow: hidden;
     }
+} 
 /*-----------------------------------------------------CONTATO----------------------------------------------------------------*/
 #contato {
     padding: 60px 20px;
