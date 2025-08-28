@@ -408,6 +408,11 @@
                         </fieldset>
 
                         <fieldset>
+                            <legend>Assunto</legend>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </fieldset>
+
+                        <fieldset>
                             <legend>Mensagem</legend>
                             <textarea id="mensagem" name="mensagem" rows="1" required></textarea>
                         </fieldset>

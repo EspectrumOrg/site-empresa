@@ -9,5 +9,6 @@ CREATE TABLE tbContato (
     idContato INT PRIMARY KEY AUTO_INCREMENT
     ,nomeContato VARCHAR (120)
     ,emailContato VARCHAR (90)
-    ,mensagemContato VARCHAR (15500)
+    ,assuntoContato VARCHAR (120)
+    ,mensagemContato VARCHAR (550)
 );
