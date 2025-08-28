@@ -16,6 +16,8 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
@@ -107,7 +109,7 @@
             <div class="sobre-nos-carousel-conteudo swiper">
                 <div class="wrapper">
                     <div class="card-list swiper-wrapper">
-                        
+
                         <div class="card swiper-slide">
                             <div class="card-image">
                                 <img src="images/Sobre/imagem1.png" alt="Elaboração de Sites">
@@ -119,7 +121,7 @@
                             </div>
                         </div>
 
-                       
+
                         <div class="card swiper-slide">
                             <div class="card-image">
                                 <img src="images/Sobre/imagem2.jpg" alt="Consultoria em Tecnologia Social">
@@ -131,7 +133,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="card swiper-slide">
                             <div class="card-image">
                                 <img src="images/Sobre/imagem3.png" alt="Desenvolvimento de Aplicativos">
@@ -143,7 +145,7 @@
                             </div>
                         </div>
 
-                   
+
                         <div class="card swiper-slide">
                             <div class="card-image">
                                 <img src="images/Sobre/imagem4.jpg" alt="Teste e Qualidade">
@@ -154,7 +156,7 @@
                                 <p class="card-text">Oferecemos testagem para da qualidade dos softwares para empresas.</p>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
@@ -198,9 +200,17 @@
                         invisível.</p>
                 </div>
 
-                <div class="imagem">
-                    <img src="images/Sobre/etec-img01.jpg" alt="Equipe Espectrum">
-                    <p>Foto tirada em 2006, no interior da Escola Técnica Estadual de Guaianazes</p>
+                <div id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.446574058671!2d-46.39984617570361!3d-23.556123402435123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce65086cafaf55%3A0xf7da96815e7611da!2sEscola%20T%C3%A9cnica%20Estadual%20de%20Guaianazes!5e0!3m2!1spt-BR!2sbr!4v1756336893057!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        width="100%"
+                        z=17
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -334,42 +344,49 @@
 
 
 
-<!-- Parceiros (decentemente RESPONSIVO/normal) ---------------------------------------------------------->
+    <!-- Parceiros (decentemente RESPONSIVO/normal) ---------------------------------------------------------->
     <section id="parceiros" class="parceiros fade-in">
         <h2 id="parceiros-titulo">Parceiros</h2>
         <div class="parceiros-content">
-                <div class="parceiros-card">
-                    <!--<h2 id="empresa-01">Harpion</h2>-->
-                    <img class="img-parceiro" src="images/Parceiros/harpion.jpeg" alt="Harpion Logo">
-                    <div class="parceiros-hoverText">
-                        <!--<h4>Slogan da empresa</h4>-->
-                        <h4>"A Harpion é movida pela inovação e pelo compromisso com a transformação digital"</h4>
-                    </div>
+            <div class="parceiros-card">
+                <!--<h2 id="empresa-01">Harpion</h2>-->
+                <img class="img-parceiro" src="images/Parceiros/harpion.jpeg" alt="Harpion Logo">
+                <div class="parceiros-hoverText">
+                    <!--<h4>Slogan da empresa</h4>-->
+                    <h4>"A Harpion é movida pela inovação e pelo compromisso com a transformação digital"</h4>
                 </div>
-                <div class="parceiros-card">
-                    <!--<h2 id="empresa-02">Split</h2>-->
-                    <img class="img-parceiro" src="images/Parceiros/split.jpeg" alt="Split Logo">
-                    <div class="parceiros-hoverText">
-                        <!--<h4>Slogan da empresa</h4>-->
-                        <h4>Atua no setor mobile, voltada a amenizar causas sociais latentes com seus trabalhos</h4>
-                    </div>
-                </div>    
-                <div class="parceiros-card">
-                    <!--<h2 id="empresa-03">Umond</h2>-->
-                    <img class="img-parceiro" src="images/Parceiros/umond.JPEG" alt="Umond Logo">
-                    <div class="parceiros-hoverText">
-                        <!--<h4>Slogan da empresa</h4>-->
-                        <h4>"Na Umond, somos apaixonados por proteger o que é mais valioso para você"</h4>
-                    </div>
+            </div>
+            <div class="parceiros-card">
+                <!--<h2 id="empresa-02">Split</h2>-->
+                <img class="img-parceiro" src="images/Parceiros/split.jpeg" alt="Split Logo">
+                <div class="parceiros-hoverText">
+                    <!--<h4>Slogan da empresa</h4>-->
+                    <h4>Atua no setor mobile, voltada a amenizar causas sociais latentes com seus trabalhos</h4>
                 </div>
+            </div>
+            <div class="parceiros-card">
+                <!--<h2 id="empresa-03">Umond</h2>-->
+                <img class="img-parceiro" src="images/Parceiros/umond.JPEG" alt="Umond Logo">
+                <div class="parceiros-hoverText">
+                    <!--<h4>Slogan da empresa</h4>-->
+                    <h4>"Na Umond, somos apaixonados por proteger o que é mais valioso para você"</h4>
+                </div>
+            </div>
         </div>
     </section>
-    
+
 
     <!-- Contato ------------------------------------------------------------>
     <section id="contato" class="contato fade-in">
         <div class="container">
             <h2>Entre em Contato</h2>
+
+            <?php
+            if (isset($_GET['status']) && $_GET['status'] == 'sucesso') {
+                echo '<p class="mensagem-sucesso">Mensagem enviada com sucesso!</p>';
+            }
+            ?>
+
             <div class="contato-content">
                 <!-- Img -->
                 <div class="imagem fade-in">
@@ -467,6 +484,8 @@
     <script src="js/navbar/scroll.js"></script> <!-- Scroll Navbar JS -->
     <script src="js/home/script.js"></script> <!-- Linking Swiper JS Caroussel Home -->
     <script src="js/carousel-sobre/swiper.js"></script> <!-- Linking Swiper JS Cards Portfólio -->
+    <script src="js/maps/script.js"></script> <!-- Maps com google -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 
 </html>
